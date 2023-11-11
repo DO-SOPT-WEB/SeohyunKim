@@ -2,6 +2,7 @@ import { POST_LIST } from "../constants/POST_LIST";
 import Post from "../components/Post";
 import styled from "styled-components";
 import Header from "../components/Header";
+import { Outlet } from "react-router-dom";
 
 // 게시글 리스트
 const PostList = () => {
@@ -21,6 +22,7 @@ const PostList = () => {
   return (
     <Container>
       <Header />
+      <Outlet />
       <PostListContainer>{postList}</PostListContainer>
     </Container>
   );

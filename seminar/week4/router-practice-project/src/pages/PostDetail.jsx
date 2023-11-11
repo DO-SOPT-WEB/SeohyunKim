@@ -1,17 +1,20 @@
 import styled from "styled-components";
 import Header from "../components/Header";
 import { POST_LIST } from "../constants/POST_LIST";
+import { useParams } from "react-router-dom";
 
 const PostDetail = () => {
   // useParams 실습
+  const { postId } = useParams();
+  const targetPost = POST_LIST.find(({ id }) => String(id) === postId);
 
   return (
     <Container>
-      <Header />
+      {/* <Header /> */}
       <PostDetailContainer>
-        {/* <img src={targetPost.imgSrc} alt={targetPost.title} />
+        <img src={targetPost.imgSrc} alt={targetPost.title} />
         <Title>{targetPost.title}</Title>
-        <Description>{targetPost.description}</Description> */}
+        <Description>{targetPost.description}</Description>
       </PostDetailContainer>
     </Container>
   );

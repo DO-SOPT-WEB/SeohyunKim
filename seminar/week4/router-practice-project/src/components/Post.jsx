@@ -1,9 +1,13 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 // 게시물
 const Post = ({ id, imgSrc, title }) => {
   // useNavigate 실습
-  const handleOnClickDetail = () => {};
+  const navigate = useNavigate();
+  const handleOnClickDetail = () => {
+    navigate(`/post/${id}`);
+  };
 
   return (
     <PostContainer>

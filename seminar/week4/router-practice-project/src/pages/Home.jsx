@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <Container>
       <Header />
       <main>
-        <p>게시물 리스트 보러 고고!</p>
-        {/* <MoveButton >게시물 리스트 보러 고고!</MoveButton> */}
+        <MoveButton to="/post">게시물 리스트 보러 고고!</MoveButton>
       </main>
     </Container>
   );
@@ -27,21 +27,21 @@ const Container = styled.div`
   }
 `;
 
-// const MoveButton = styled()`
-//   background-color: black;
-//   color: white;
+const MoveButton = styled(Link)`
+  background-color: black;
+  color: white;
 
-//   border-radius: 7px;
+  border-radius: 7px;
 
-//   padding: 10px 15px;
-//   font-size: 30px;
+  padding: 10px 15px;
+  font-size: 30px;
 
-//   text-decoration: none;
+  text-decoration: none;
 
-//   &:hover {
-//     background-color: white;
-//     color: purple;
+  &:hover {
+    background-color: white;
+    color: purple;
 
-//     border: 2px solid black;
-//   }
-// `;
+    border: 2px solid black;
+  }
+`;
